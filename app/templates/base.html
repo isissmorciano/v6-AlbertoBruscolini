@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Negozio Online{% endblock %}</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f5f6fa; color: #2d3436; }
+        nav {
+            background: #2d3436;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            height: 56px;
+        }
+        nav a {
+            color: #dfe6e9;
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        nav a:hover { background: #636e72; color: #fff; }
+        nav .brand { color: #fff; font-weight: 700; font-size: 1.1rem; margin-right: auto; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
+        h1 { font-size: 1.8rem; margin-bottom: 1.5rem; color: #2d3436; }
+        h2 { font-size: 1.3rem; margin-bottom: 1rem; color: #636e72; }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+        table { width: 100%; border-collapse: collapse; }
+        th { background: #f0f0f0; padding: 0.75rem 1rem; text-align: left; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: #636e72; }
+        td { padding: 0.75rem 1rem; border-bottom: 1px solid #f0f0f0; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: #fafafa; }
+        a { color: #0984e3; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .btn-primary { background: #0984e3; color: #fff; }
+        .btn-primary:hover { background: #0770c4; text-decoration: none; }
+        .btn-secondary { background: #636e72; color: #fff; }
+        .btn-secondary:hover { background: #4a5568; text-decoration: none; }
+        form label { display: block; font-weight: 600; margin-bottom: 0.3rem; font-size: 0.9rem; }
+        form input, form select {
+            width: 100%;
+            padding: 0.55rem 0.8rem;
+            border: 1.5px solid #dfe6e9;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            transition: border 0.2s;
+        }
+        form input:focus, form select:focus { outline: none; border-color: #0984e3; }
+        .empty { color: #b2bec3; font-style: italic; padding: 1rem 0; }
+        .badge {
+            display: inline-block;
+            background: #dfe6e9;
+            color: #636e72;
+            border-radius: 12px;
+            padding: 0.15rem 0.6rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .price { font-weight: 700; color: #00b894; }
+    </style>
+</head>
+<body>
+<nav>
+    <span class="brand">🛒 Negozio Online</span>
+    <a href="/">Categorie</a>
+    <a href="/ricerca">Ricerca</a>
+    <a href="/statistiche">Statistiche</a>
+    <a href="/crea_categoria">+ Categoria</a>
+    <a href="/crea_prodotto">+ Prodotto</a>
+</nav>
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
+
+<!--è lungo ma l'ho direttamente copiato da un altro esercizio, dovrebbe andare-->
